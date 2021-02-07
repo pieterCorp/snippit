@@ -31,6 +31,10 @@ app.use((req, res, next) => {
 const userRoute = require('./routes/users');
 app.use('/users', userRoute);
 
+//USE SNIPPITS MIDDLEWARE
+
+const snippitRoute = require('./routes/snippits');
+app.use('/snippits', snippitRoute);
 
 // HOST WELCOMEPAGE
 
