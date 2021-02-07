@@ -26,7 +26,7 @@ router.get('/:id', getSnippit, (req, res) => {
 router.post('/', async (req, res) => {
     const snippit = new Snippit({
         name: req.body.name,
-        password: req.body.content
+        content: req.body.content
     });
 
     try{
