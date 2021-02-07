@@ -26,11 +26,6 @@ app.use((req, res, next) => {
     next();
 });
 
-//USE USER MIDDLEWARE
-
-const userRoute = require('./routes/users');
-app.use('/users', userRoute);
-
 //USE SNIPPITS MIDDLEWARE
 
 const snippitRoute = require('./routes/snippits');

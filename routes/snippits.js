@@ -26,7 +26,9 @@ router.get('/:id', getSnippit, (req, res) => {
 router.post('/', async (req, res) => {
     const snippit = new Snippit({
         name: req.body.name,
-        content: req.body.content
+        content: req.body.content,
+        author: req.body.author,
+        summary: req.body.summary,
     });
 
     try{
@@ -45,6 +47,12 @@ router.patch('/:id', getSnippit, async (req, res) => {
     }
     if(req.body.content != null){
         res.snippit.content = req.body.content;
+    }
+    if(req.body.author != null){
+        res.snippit.author = req.body.author;
+    }
+    if(req.body.summary != null){
+        res.snippit.summary = req.body.summary;
     }
     try{
         const updatedSnippit = await res.snippit.save();

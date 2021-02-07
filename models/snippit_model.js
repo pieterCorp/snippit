@@ -7,8 +7,17 @@ const snippitSchema = new mongoose.Schema({
     },
     content: {
         type: String,
+        required: true
+    },
+    author: {
+        type: String,
+        required: true
+    },
+    summary: {
+        type: String,
         required: false
     }
+
 });
 
 module.exports = mongoose.model('Snippit', snippitSchema);
